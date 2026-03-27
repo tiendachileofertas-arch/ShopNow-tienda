@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopNow Global</title>
+<meta name="theme-color" content="#FF6B00">
+<meta name="description" content="ShopNow Global - Productos virales con envío a Chile, USA y España. Paga cuando te llega.">
+<meta name="keywords" content="productos virales, comprar online, pago contra entrega, GPS mascotas, gadgets baratos">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0A0A0A;color:#fff;font-family:Arial,sans-serif;overflow-x:hidden;}
+.bar{background:linear-gradient(90deg,#FF6B00,#FFB800,#FF6B00);padding:8px;text-align:center;font-size:12px;font-weight:700;color:#000;}
+.hdr{background:#111;border-bottom:2px solid #FF6B00;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.logo{font-size:24px;font-weight:900;color:#fff;letter-spacing:2px;}
+.logo span{color:#FF6B00;}
+.wa-btn{background:#00C853;color:#fff;padding:6px 12px;border-radius:8px;font-size:11px;font-weight:700;text-decoration:none;}
+.trust{background:#1A1A1A;padding:8px 15px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid rgba(255,107,0,0.2);}
+.ti{font-size:11px;color:#888;}
+.ti strong{color:#fff;}
+.tabs{background:#111;display:flex;border-bottom:2px solid rgba(255,107,0,0.2);position:sticky;top:57px;z-index:90;}
+.tb{flex:1;padding:12px 8px;background:none;border:none;color:#888;cursor:pointer;font-size:11px;font-weight:700;border-bottom:3px solid transparent;white-space:nowrap;}
+.tb.active{color:#FF6B00;border-bottom:3px solid #FF6B00;background:rgba(255,107,0,0.08);}
+.tc{display:none;}
+.tc.active{display:block;}
+.hero{background:linear-gradient(135deg,#111,#1A0800,#111);padding:25px 15px;text-align:center;}
+.ht{font-size:28px;font-weight:900;line-height:1.2;margin-bottom:8px;}
+.ht span{color:#FF6B00;}
+.hs{font-size:13px;color:#888;margin-bottom:15px;}
+.hst{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;}
+.hsi{background:rgba(255,107,0,0.1);border:1px solid rgba(255,107,0,0.3);border-radius:10px;padding:8px 15px;text-align:center;}
+.hsin{font-size:18px;font-weight:900;color:#FF6B00;}
+.hsil{font-size:9px;color:#888;text-transform:uppercase;}
+.ps{padding:20px 12px;max-width:1200px;margin:0 auto;}
+.ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px;}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;}
+.pc{background:#1A1A1A;border:1px solid rgba(255,107,0,0.15);border-radius:12px;overflow:hidden;position:relative;}
+.pi{width:100%;height:120px;display:flex;align-items:center;justify-content:center;font-size:42px;background:rgba(255,107,0,0.05);overflow:hidden;}
+.pi img{width:100%;height:100%;object-fit:cover;}
+.pbdg{position:absolute;top:7px;left:7px;background:#FF1744;color:#fff;font-size:9px;padding:2px 7px;border-radius:5px;font-weight:900;}
+.pbdg.g{background:#FFB800;color:#000;}
+.pbd{padding:10px;}
+.pn{font-size:12px;font-weight:700;margin-bottom:3px;line-height:1.3;}
+.pd{font-size:10px;color:#aaa;margin-bottom:4px;line-height:1.3;}
+.pst{font-size:10px;margin-bottom:3px;}
+.psld{font-size:10px;color:#00C853;font-weight:600;margin-bottom:5px;}
+.ppr{display:flex;align-items:center;gap:5px;margin-bottom:7px;}
+.pp{font-size:14px;font-weight:900;color:#FF6B00;}
+.pop{font-size:10px;color:#888;text-decoration:line-through;}
+.bb{width:100%;padding:8px;background:linear-gradient(135deg,#FF6B00,#E55A00);border:none;border-radius:7px;color:#fff;font-size:11px;font-weight:800;cursor:pointer;}
+.pdl{font-size:9px;color:#00C853;text-align:center;margin-top:5px;font-weight:600;}
+.cs{padding:15px;max-width:780px;margin:0 auto;}
+.cb{background:#111;border:1px solid rgba(255,107,0,0.2);border-radius:14px;overflow:hidden;}
+.ch{background:#1A1A1A;padding:12px 15px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,107,0,0.15);}
+.ca{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#FF6B00,#E55A00);display:flex;align-items:center;justify-content:center;font-size:20px;}
+.cn{font-size:12px;font-weight:900;}
+.cst{font-size:10px;color:#00C853;margin-top:1px;}
+.ob{margin-left:auto;background:rgba(0,200,83,0.1);border:1px solid rgba(0,200,83,0.3);border-radius:7px;padding:5px 10px;font-size:10px;color:#00C853;cursor:pointer;font-weight:700;}
+.ma{height:340px;overflow-y:auto;padding:15px;display:flex;flex-direction:column;gap:10px;background:#0A0A0A;}
+.msg{display:flex;gap:7px;}
+.msg.u{flex-direction:row-reverse;}
+.av{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;}
+.bav{background:linear-gradient(135deg,#FF6B00,#E55A00);}
+.uav{background:#222;}
+.mb{max-width:78%;padding:10px 13px;border-radius:10px;font-size:12px;line-height:1.6;white-space:pre-wrap;}
+.bb2{background:#1A1A1A;border:1px solid rgba(255,107,0,0.15);border-radius:3px 10px 10px 10px;color:rgba(255,255,255,0.9);}
+.ub{background:linear-gradient(135deg,#FF6B00,#E55A00);border-radius:10px 3px 10px 10px;color:#fff;}
+.td{display:flex;gap:4px;padding:10px 13px;background:#1A1A1A;border-radius:3px 10px 10px 10px;}
+.td div{width:6px;height:6px;background:#FF6B00;border-radius:50%;animation:bo 1.2s infinite;}
+.td div:nth-child(2){animation-delay:0.2s}.td div:nth-child(3){animation-delay:0.4s}
+@keyframes bo{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.qr{display:flex;gap:5px;flex-wrap:wrap;padding:10px 13px;background:#111;border-top:1px solid rgba(255,107,0,0.08);}
+.qb{background:#1A1A1A;border:1px solid rgba(255,107,0,0.25);color:rgba(255,255,255,0.8);padding:5px 10px;border-radius:18px;cursor:pointer;font-size:10px;font-weight:600;white-space:nowrap;}
+.ia{display:flex;gap:7px;padding:12px 13px;border-top:1px solid rgba(255,107,0,0.08);background:#111;}
+.ci{flex:1;background:#1A1A1A;border:1px solid rgba(255,107,0,0.2);border-radius:9px;padding:10px 15px;color:#fff;font-size:12px;outline:none;}
+.ci::placeholder{color:#888;}
+.sb{width:40px;height:40px;border-radius:9px;background:linear-gradient(135deg,#FF6B00,#E55A00);border:none;cursor:pointer;font-size:16px;}
+.os{padding:20px 12px;max-width:780px;margin:0 auto;}
+.oc2{background:#111;border:1px solid rgba(0,200,83,0.2);border-radius:14px;overflow:hidden;}
+.oh{background:#1A1A1A;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;}
+.oht{font-size:13px;font-weight:900;color:#00C853;}
+.ob2{padding:14px;max-height:400px;overflow-y:auto;}
+.oi{background:#1A1A1A;border:1px solid rgba(0,200,83,0.15);border-radius:9px;padding:12px;margin-bottom:8px;}
+.on{font-size:10px;color:#FFB800;margin-bottom:5px;font-weight:700;}
+.od{font-size:11px;color:rgba(255,255,255,0.8);line-height:1.7;}
+.ost{display:inline-block;background:rgba(0,200,83,0.15);border:1px solid rgba(0,200,83,0.3);border-radius:5px;padding:2px 8px;font-size:9px;color:#00C853;margin-top:5px;font-weight:700;}
+.no{text-align:center;padding:40px;color:#888;}
+.pay{padding:0 12px 25px;max-width:780px;margin:0 auto;}
+.pc2{background:#111;border:1px solid rgba(255,107,0,0.15);border-radius:14px;padding:18px;}
+.pg2{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;}
+.pi2{background:#1A1A1A;border:1px solid rgba(255,107,0,0.1);border-radius:9px;padding:12px;text-align:center;}
+.wa{position:fixed;bottom:18px;right:18px;z-index:1000;background:#00C853;width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 6px 20px rgba(0,200,83,0.4);animation:wf 3s ease-in-out infinite;}
+@keyframes wf{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.ft{background:#111;border-top:1px solid rgba(255,107,0,0.15);padding:18px;text-align:center;font-size:11px;color:#888;}
+.ft span{color:#FF6B00;}
+</style>
+</head>
+<body><div class="bar">🔥 ENVÍO A TODO CHILE • PAGAS CUANDO TE LLEGA 📦 • WhatsApp: +56923857587 • 100% SEGURO ✅</div>
+<div class="hdr">
+  <div class="logo">SHOP<span>NOW</span></div>
+  <a class="wa-btn" href="https://wa.me/56923857587" target="_blank">📱 +56923857587</a>
+</div>
+<div class="trust">
+  <div class="ti">🚚 Envío <strong>Todo Chile</strong></div>
+  <div class="ti">📦 <strong>Paga</strong> al recibir</div>
+  <div class="ti">⭐ Rating <strong>4.9/5</strong></div>
+  <div class="ti">🔒 <strong>100%</strong> Seguro</div>
+</div>
+<div class="tabs">
+  <button class="tb active" onclick="showTab('products',this)">🛍️ Productos</button>
+  <button class="tb" onclick="showTab('bot',this)">💬 Bot Vendedor</button>
+  <button class="tb" onclick="showTab('orders',this)">📋 Pedidos (<span id="oc">0</span>)</button>
+</div>
+<div class="tc active" id="tab-products">
+  <div class="hero">
+    <div class="ht">Los productos más <span>VIRALES</span> del mundo 🌍</div>
+    <div class="hs">Envío a todo Chile • Pagas cuando te llega • Sin riesgo</div>
+    <div class="hst">
+      <div class="hsi"><div class="hsin" id="cnt">1,248</div><div class="hsil">Ventas</div></div>
+      <div class="hsi"><div class="hsin">🌍 12</div><div class="hsil">Países</div></div>
+      <div class="hsi"><div class="hsin">⭐ 4.9</div><div class="hsil">Rating</div></div>
+      <div class="hsi"><div class="hsin" id="ost">0</div><div class="hsil">Pedidos Hoy</div></div>
+    </div>
+  </div>
+  <div class="ps">
+    <div class="ph"><div style="font-size:15px;font-weight:900;">🔥 PRODUCTOS VIRALES</div><div style="background:#FF1744;color:#fff;font-size:10px;padding:3px 10px;border-radius:20px;font-weight:800;">🔴 EN VIVO</div></div>
+    <div class="pg" id="pg"></div>
+  </div>
+  <div style="background:#111;padding:20px 12px;border-top:1px solid rgba(255,107,0,0.2);">
+    <div style="max-width:600px;margin:0 auto;text-align:center;">
+      <div style="font-size:15px;font-weight:900;margin-bottom:15px;">⭐ LO QUE DICEN NUESTROS CLIENTES</div>
+      <div style="display:grid;gap:10px;">
+        <div style="background:#1a1a1a;border:1px solid rgba(255,107,0,0.2);border-radius:10px;padding:12px;text-align:left;"><div style="font-size:12px;font-weight:700;">Maria González - Santiago 🇨🇱</div><div style="color:#FFD700;margin:3px 0;">⭐⭐⭐⭐⭐</div><div style="font-size:11px;color:#aaa;">El masajeador llegó en 3 días. Pagué cuando me llegó. 100% recomendado!</div></div>
+        <div style="background:#1a1a1a;border:1px solid rgba(255,107,0,0.2);border-radius:10px;padding:12px;text-align:left;"><div style="font-size:12px;font-weight:700;">Carlos Pérez - Valparaíso 🇨🇱</div><div style="color:#FFD700;margin:3px 0;">⭐⭐⭐⭐⭐</div><div style="font-size:11px;color:#aaa;">Pedí el GPS para mi perro y llegó rapidísimo. Pagué al recibirlo!</div></div>
+        <div style="background:#1a1a1a;border:1px solid rgba(255,107,0,0.2);border-radius:10px;padding:12px;text-align:left;"><div style="font-size:12px;font-weight:700;">Ana Martínez - Concepción 🇨🇱</div><div style="color:#FFD700;margin:3px 0;">⭐⭐⭐⭐⭐</div><div style="font-size:11px;color:#aaa;">La BB Cream es espectacular! Cubre todo y dura todo el día!</div></div>
+      </div>
+      <div style="margin-top:12px;font-size:11px;color:#888;">⭐ 4.9/5 basado en +2,500 reseñas verificadas</div>
+    </div>
+  </div>
+  <div class="pay">
+    <div class="pc2">
+      <div style="font-size:12px;font-weight:900;text-align:center;margin-bottom:12px;">💳 MÉTODOS DE PAGO</div>
+      <div class="pg2" id="pg2"></div>
+    </div>
+  </div>
+</div>
+<div class="tc" id="tab-bot">
+  <div class="cs">
+    <div class="cb">
+      <div class="ch">
+        <div class="ca">🤖</div>
+        <div><div class="cn">SHOPNOW AI SALES BOT</div><div class="cst">🟢 En línea • Toma pedidos solo</div></div>
+        <button class="ob" onclick="showTab('orders',document.querySelectorAll('.tb')[2])">📋 Pedidos</button>
+      </div>
+      <div class="ma" id="ma"></div>
+      <div class="qr" id="qr"></div>
+      <div class="ia">
+        <input class="ci" id="ci" placeholder="Escríbeme aquí... 💬" onkeypress="if(event.key==='Enter')send()"/>
+        <button class="sb" onclick="send()">➤</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tc" id="tab-orders">
+  <div class="os">
+    <div class="oc2">
+      <div class="oh"><div class="oht">📋 PEDIDOS RECIBIDOS</div><div style="font-size:11px;color:#888" id="ot">Total: 0</div></div>
+      <div class="ob2" id="ol"><div class="no">📭<br>Sin pedidos aún</div></div>
+    </div>
+  </div>
+</div>
+<div class="ft"><span>SHOPNOW GLOBAL</span> © 2026 • AI POWERED<br>📱 WhatsApp: <span>+56923857587</span></div>
+<a class="wa" href="https://wa.me/56923857587" target="_blank">📱</a><script>
+const P=[
+{e:'💄',n:'BB Cream Flower Secret',p:'$12.990',op:'$25.000',b:'BELLEZA',bg:'g',id:'bbcream',d:'Cubre manchas 24 horas.',s:5,r:389,sl:'3.5k vendidos'},
+{e:'💅',n:'Pintador Uñas Auto',p:'$14.990',op:'$28.000',b:'VIRAL',bg:'g',id:'unas',d:'Pinta perfecto sin mancharte.',s:5,r:421,sl:'3.2k vendidos'},
+{e:'🌀',n:'Rizador Automático',p:'$24.990',op:'$45.000',b:'BELLEZA',bg:'',id:'rizador',d:'Riza sin quemarte.',s:5,r:287,sl:'2.6k vendidos'},
+{e:'🧖‍♀️',n:'Rodillo Jade Facial',p:'$9.990',op:'$18.000',b:'VIRAL',bg:'g',id:'jade',d:'Reduce ojeras y tonifica.',s:5,r:892,sl:'7.2k vendidos'},
+{e:'💋',n:'Suero Labios Voluminizador',p:'$8.990',op:'$16.000',b:'HOT',bg:'g',id:'labios',d:'Volumen natural en 2 minutos.',s:5,r:1203,sl:'9.8k vendidos'},
+{e:'🌿',n:'Aceite Vitamina C',p:'$8.990',op:'$18.000',b:'NUEVO',bg:'g',id:'vitc',d:'Ilumina tu piel en 7 días.',s:5,r:1432,sl:'11.2k vendidos'},
+{e:'🦷',n:'Kit Blanqueador Dental',p:'$9.990',op:'$20.000',b:'SONRISA',bg:'g',id:'dental',d:'6 tonos más blanco en 2 semanas.',s:5,r:2103,sl:'15.6k vendidos'},
+{e:'💆',n:'Parches Ojeras Colágeno',p:'$7.990',op:'$15.000',b:'BELLEZA',bg:'',id:'ojeras',d:'Elimina ojeras en 20 min.',s:5,r:987,sl:'8.4k vendidos'},
+{e:'💇‍♀️',n:'Cepillo Desenredante',p:'$7.990',op:'$14.000',b:'VIRAL',bg:'',id:'cepillo',d:'Desenreda sin dolor.',s:5,r:1654,sl:'12.3k vendidos'},
+{e:'🌸',n:'Perfume Sólido Bolsillo',p:'$6.990',op:'$13.000',b:'REGALO',bg:'',id:'perfume',d:'Fragancia 8 horas.',s:5,r:743,sl:'5.9k vendidos'},
+{e:'🧴',n:'Crema Manos Anti-edad',p:'$7.990',op:'$15.000',b:'PROMO',bg:'',id:'crema',d:'Rejuvenece en 2 semanas.',s:5,r:892,sl:'7.1k vendidos'},
+{img:'https://drive.google.com/uc?export=view&id=19fH2DjY-egr0tlDEjJsjQbdsToRLIKiQ',e:'🐾',n:'GPS Tracker Mini GF-07',p:'$19.990',op:'$35.000',b:'TOP #1',bg:'g',id:'gps',d:'Localiza mascotas en tiempo real.',s:5,r:512,sl:'4.8k vendidos'},
+{e:'🐾',n:'Bebedero Automático',p:'$15.990',op:'$28.000',b:'MASCOTAS',bg:'',id:'bebedero',d:'Agua fresca siempre.',s:5,r:203,sl:'1.8k vendidos'},
+{e:'🐕',n:'Cortaúñas Mascotas LED',p:'$11.990',op:'$22.000',b:'SEGURO',bg:'',id:'cortaunas',d:'Corta con luz LED.',s:5,r:456,sl:'3.4k vendidos'},
+{e:'🐈',n:'Cama Cápsula Gatos',p:'$19.990',op:'$35.000',b:'VIRAL',bg:'g',id:'capsula',d:'La más viral de TikTok.',s:5,r:734,sl:'5.6k vendidos'},
+{e:'🐶',n:'Collar Anti-pulgas Natural',p:'$9.990',op:'$18.000',b:'NATURAL',bg:'',id:'antipulgas',d:'Protege 8 meses sin químicos.',s:5,r:1123,sl:'9.2k vendidos'},
+{e:'🐾',n:'Juguete Interactivo Gatos',p:'$8.990',op:'$16.000',b:'TIERNO',bg:'',id:'juguete',d:'Mantiene activo a tu gato.',s:5,r:654,sl:'5.1k vendidos'},
+{e:'🦮',n:'Arnés Ajustable Perros',p:'$11.990',op:'$22.000',b:'PASEO',bg:'',id:'arnes',d:'Pasea sin que jale.',s:5,r:887,sl:'7.3k vendidos'},
+{e:'🧲',n:'Soporte Magnético Celular',p:'$9.990',op:'$18.000',b:'VIRAL',bg:'g',id:'soporte',d:'Imán ultra resistente.',s:5,r:245,sl:'2.1k vendidos'},
+{e:'🎮',n:'Gamepad para Celular',p:'$18.990',op:'$35.000',b:'GAMER',bg:'',id:'gamepad',d:'Compatible Android e iOS.',s:4,r:178,sl:'1.4k vendidos'},
+{e:'⌚',n:'Smartwatch Deportivo',p:'$29.990',op:'$55.000',b:'HOT',bg:'g',id:'smartwatch',d:'Monitor cardíaco y GPS.',s:4,r:445,sl:'3.9k vendidos'},
+{e:'🔌',n:'Cargador Inalámbrico 3en1',p:'$19.990',op:'$38.000',b:'TECH',bg:'g',id:'cargador',d:'Carga todo al mismo tiempo.',s:5,r:621,sl:'4.9k vendidos'},
+{e:'🔋',n:'Batería Portátil 20000mAh',p:'$19.990',op:'$38.000',b:'POTENTE',bg:'g',id:'bateria',d:'Carga tu celular 5 veces.',s:5,r:2341,sl:'18.7k vendidos'},
+{e:'🎧',n:'Audífonos Inalámbricos',p:'$14.990',op:'$28.000',b:'VIRAL',bg:'g',id:'audifonos',d:'Batería 30 horas.',s:5,r:1876,sl:'14.2k vendidos'},
+{e:'📱',n:'Soporte Celular Escritorio',p:'$6.990',op:'$13.000',b:'TECH',bg:'',id:'soporte2',d:'Ajustable 360 grados.',s:5,r:543,sl:'4.3k vendidos'},
+{e:'💡',n:'Tira LED RGB 5 metros',p:'$12.990',op:'$24.000',b:'VIRAL',bg:'g',id:'tira',d:'Control por app.',s:5,r:1432,sl:'11.8k vendidos'},
+{e:'🧹',n:'Mopa Microfibra Giratoria',p:'$13.990',op:'$25.000',b:'HOGAR',bg:'',id:'mopa',d:'Gira 360 grados.',s:5,r:1109,sl:'9.1k vendidos'},
+{e:'🫧',n:'Dispensador Jabón Auto',p:'$11.990',op:'$22.000',b:'HIGIENE',bg:'',id:'dispensador',d:'Sensor infrarrojo.',s:5,r:678,sl:'5.4k vendidos'},
+{e:'🧽',n:'Esponja Mágica Borrador',p:'$6.990',op:'$12.000',b:'LIMPIEZA',bg:'',id:'esponja',d:'Borra manchas con agua.',s:5,r:943,sl:'8.1k vendidos'},
+{e:'🧴',n:'Organizador Cocina',p:'$12.990',op:'$22.000',b:'HOME',bg:'',id:'organizador',d:'Múltiples compartimentos.',s:4,r:167,sl:'1.1k vendidos'},
+{e:'🍱',n:'Termo Buffer 630ml',p:'$19.990',op:'$35.000',b:'NUEVO',bg:'g',id:'termo',d:'Caliente 8 horas.',s:5,r:189,sl:'1.6k vendidos'},
+{e:'🌡️',n:'Termómetro Digital Frente',p:'$12.990',op:'$24.000',b:'SALUD',bg:'g',id:'termometro',d:'Resultado en 1 segundo.',s:5,r:1876,sl:'14.9k vendidos'},
+{e:'💆',n:'Masajeador Cuello Espalda',p:'$24.990',op:'$45.000',b:'SALUD',bg:'g',id:'masajeador',d:'Alivia dolor con calor.',s:5,r:634,sl:'5.1k vendidos'},
+{e:'💪',n:'Set Bandas Elásticas x5',p:'$9.990',op:'$18.000',b:'FITNESS',bg:'',id:'bandas',d:'5 niveles de resistencia.',s:5,r:356,sl:'3.1k vendidos'},
+{e:'🏋️',n:'Rueda Abdominal',p:'$11.990',op:'$20.000',b:'FITNESS',bg:'',id:'rueda',d:'Tonifica abdomen y brazos.',s:5,r:143,sl:'1.0k vendidos'},
+{e:'🏃‍♀️',n:'Cinturón Sudoración',p:'$14.990',op:'$28.000',b:'VIRAL',bg:'g',id:'cinturon',d:'Activa el sudor abdominal.',s:4,r:512,sl:'4.2k vendidos'},
+{e:'💪',n:'Fascial Gun Masajeador',p:'$34.990',op:'$60.000',b:'TOP',bg:'g',id:'gun',d:'6 cabezales, silencioso.',s:5,r:1089,sl:'8.7k vendidos'},
+{e:'🔦',n:'Linterna Táctica',p:'$12.990',op:'$24.000',b:'POTENTE',bg:'',id:'linterna',d:'Ilumina 500 metros.',s:5,r:234,sl:'2.0k vendidos'},
+];
+const pays=[{i:'📦',n:'Contra Entrega',d:'Paga al recibir ✅'},{i:'🏦',n:'Bancolombia',d:'Colombia'},{i:'📲',n:'Nequi',d:'Colombia'},{i:'💵',n:'Efectivo',d:'Al recibir'},{i:'💳',n:'Payoneer',d:'Internacional ✅'}];
+let orders=[],oNum=1001,state='idle',cur={},busy=false;
+function stars(n){let s='';for(let i=0;i<5;i++)s+=i<n?'⭐':'☆';return s;}
+function showTab(id,btn){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');if(btn)btn.classList.add('active');}
+function renderP(){document.getElementById('pg').innerHTML=P.map(p=>`<div class="pc"><div class="pi">${p.img?`<img src="${p.img}" onerror="this.style.display='none'" style="width:100%;height:100%;object-fit:cover;"/>`:p.e}</div><div class="pbdg ${p.bg}">${p.b}</div><div class="pbd"><div class="pn">${p.n}</div><div class="pd">${p.d}</div><div class="pst">${stars(p.s)} <span style="color:#888;font-size:10px;">(${p.r})</span></div><div class="psld">✅ ${p.sl}</div><div class="ppr"><div class="pp">${p.p}</div><div class="pop">${p.op}</div></div><button class="bb" onclick="buy('${p.id}')">🛒 COMPRAR</button><div class="pdl">✅ Paga cuando te llega</div></div></div>`).join('');}
+function renderPay(){document.getElementById('pg2').innerHTML=pays.map(p=>`<div class="pi2"><div style="font-size:24px;margin-bottom:6px;">${p.i}</div><div style="font-size:12px;font-weight:700;">${p.n}</div><div style="font-size:10px;color:#888;margin-top:2px;">${p.d}</div></div>`).join('');}
+function renderQ(){document.getElementById('qr').innerHTML=['💄 BB Cream','🐾 GPS Mascotas','💆 Masajeador','⌚ Smartwatch','📦 ¿Cómo compro?','💳 Pagos'].map(r=>`<button class="qb" onclick="qReply('${r}')">${r}</button>`).join('');}
+function addMsg(t,u){const a=document.getElementById('ma');const d=document.createElement('div');d.className='msg'+(u?' u':'');d.innerHTML=`<div class="av ${u?'uav':'bav'}">${u?'👤':'🤖'}</div><div class="mb ${u?'ub':'bb2'}">${t}</div>`;a.appendChild(d);a.scrollTop=a.scrollHeight;}
+function typing(){const a=document.getElementById('ma');const d=document.createElement('div');d.className='msg';d.id='typ';d.innerHTML=`<div class="av bav">🤖</div><div class="td"><div></div><div></div><div></div></div>`;a.appendChild(d);a.scrollTop=a.scrollHeight;}
+function noTyp(){const t=document.getElementById('typ');if(t)t.remove();}
+function reply(t,d=1200){typing();setTimeout(()=>{noTyp();addMsg(t,false);busy=false;},d);}
+function buy(id){const p=P.find(x=>x.id===id);if(!p)return;cur={product:p};state='name';showTab('bot',document.querySelectorAll('.tb')[1]);setTimeout(()=>{addMsg(`${p.e} ${p.n} — ${p.p}`,true);busy=true;reply('¡Excelente elección! 🎉\n\n👤 ¿Cuál es tu nombre completo?');},300);}
+function flow(input){if(state==='name'){cur.name=input;state='address';reply('¡Perfecto! 😊\n\n🏠 ¿Cuál es tu dirección?\n(Calle, número, ciudad)');}else if(state==='address'){cur.address=input;state='phone';reply('¡Anotado! 📝\n\n📱 ¿Cuál es tu teléfono?');}else if(state==='phone'){cur.phone=input;state='idle';cur.num=oNum++;cur.date=new Date().toLocaleString();orders.push({...cur});updateOrders();reply(`✅ ¡PEDIDO CONFIRMADO!\n\n📋 Orden #${cur.num}\n${cur.product.e} ${cur.product.n}\n💰 ${cur.product.p}\n👤 ${cur.name}\n🏠 ${cur.address}\n📱 ${cur.phone}\n\n🚀 ¡Te contactamos pronto!\n📱 WhatsApp: +56923857587`,1500);cur={};}}
+function updateOrders(){const n=orders.length;document.getElementById('oc').textContent=n;document.getElementById('ost').textContent=n;document.getElementById('ot').textContent=`Total: ${n}`;const l=document.getElementById('ol');if(!n){l.innerHTML='<div class="no">📭<br>Sin pedidos aún</div>';return;}l.innerHTML=orders.slice().reverse().map(o=>`<div class="oi"><div class="on">📋 #${o.num} — ${o.date}</div><div class="od">${o.product.e} <strong>${o.product.n}</strong> — <strong>${o.product.p}</strong><br>👤 ${o.name} | 📱 ${o.phone}<br>🏠 ${o.address}</div><div class="ost">✅ Confirmado</div></div>`).join('');}
+async function getReply(input){const l=input.toLowerCase();if(state!=='idle'){flow(input);return;}for(const p of P){if(l.includes(p.id)||l.includes(p.n.toLowerCase().split(' ')[0])){buy(p.id);return;}}if(l.match(/comprar|quiero|buy/)){reply('📦 ¿Cómo comprar?\n\n1️⃣ Elige tu producto\n2️⃣ Toca COMPRAR\n3️⃣ El bot pide tus datos\n4️⃣ PAGAS CUANDO TE LLEGA 📦\n\n¡Sin riesgo! 🔒');return;}if(l.match(/pago|bancolombia|nequi|payoneer/)){reply('💳 Métodos de Pago:\n\n📦 Contra entrega ✅\n🏦 Bancolombia\n📲 Nequi\n💵 Efectivo\n💳 Payoneer\n\n📱 +56923857587');return;}if(l.match(/hola|hello|hi/)){reply('¡Hola! 👋 Soy el Bot IA de ShopNow 🌍\n\n✅ 40 productos virales\n✅ Pagas cuando te llega\n\n¿Qué te interesa? 😊');return;}busy=true;typing();try{const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:500,messages:[{role:"user",content:`Sales bot ShopNow. Products: ${P.map(p=>p.n).join(', ')}. WhatsApp: +56923857587. Pay on delivery. Same language. Under 60 words. Customer: "${input}"`}]})});const data=await res.json();noTyp();addMsg(data.content.map(i=>i.text||'').join(''),false);busy=false;}catch(e){noTyp();addMsg('¡Hola! ¿Te interesa algún producto? 😊',false);busy=false;}}
+function send(){const i=document.getElementById('ci');const t=i.value.trim();if(!t||busy)return;addMsg(t,true);i.value='';busy=true;getReply(t);}
+function qReply(t){document.getElementById('ci').value=t.replace(/^[^\s]+\s/,'');send();}
+let c=1248;setInterval(()=>{if(Math.random()>0.7){c++;document.getElementById('cnt').textContent=c.toLocaleString();}},6000);
+renderP();renderPay();renderQ();
+setTimeout(()=>reply('¡Hola! 👋 Soy el Bot IA de ShopNow Global 🌍\n\n✅ 40 productos virales\n✅ Pagas cuando te llega\n✅ Tomo pedidos automáticamente\n\n¿Qué producto te interesa hoy? 😊'),800);
+</script>
+</body>
+</html>
